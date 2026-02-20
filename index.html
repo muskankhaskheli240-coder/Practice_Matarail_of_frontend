@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Tahreem ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color:white;
+    padding:20px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight:800;
+    text-shadow: 0 0 15px #fff, 0 0 35px #ff69b4;
+    margin-bottom:20px;
+}
+
+#message {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    max-width:800px;
+    min-height:120px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4b8b;
+    cursor: pointer;
+    box-shadow: 0 0 20px #fff;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px #ff69b4;
+}
+
+#surprise {
+    display:none;
+    margin-top:25px;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 35px gold; }
+}
+
+.heart {
+    position:absolute;
+    font-size:20px;
+    animation: float linear forwards;
+    color:white;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity:1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity:0;
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+    body{
+        padding:15px;
+    }
+    #message{
+        min-height:150px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Happy Birthday Tahreem Arain 🎂✨</h1>
+
+<div id="message"></div>
+
+<button onclick="showSurprise()">Click for Magic 🎁</button>
+
+<div id="surprise">You Are My Forever Best Friend 💖🌟</div>
+
+<script>
+
+const text = "Tahreem Arain, you are not just my best friend, you are my happiness, my safe place, and my forever person. 💕 May your life shine brighter than the stars and be filled with endless love, success, and magical memories. I am so lucky to have you in my life. ✨🎉";
+
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        document.getElementById("message").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 40);
+    }
+}
+
+typeWriter();
+
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+    createHearts();
+}
+
+function createHearts() {
+    for (let i = 0; i < 40; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        document.body.appendChild(heart);
+    }
+}
+
+</script>
+
+</body>
+</html>
