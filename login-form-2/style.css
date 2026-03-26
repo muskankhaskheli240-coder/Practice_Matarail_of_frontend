@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    background: #151f28;
+}
+ .square{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .square i{
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+ }
+ .square i:nth-child(1){
+    border-radius: 38% 61% 63% 37% / 41% 44% 56% 59% ;
+    animation: animate 4s linear-infinite;
+ }
+
+ .square i:nth-child(2){
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37% ;
+    animation: animate 6s linear-infinite;
+ }
+
+ .square i:nth-child(3){
+    border-radius:41% 44% 56% 59% 38% 62% 63%37%;
+    animation: animate 4s linear-infinite;
+ }
+
+ .square:hover i{
+   border: 6px solid var(--clr);
+   filter: drop-shadow(0 0 20px var(--clr));
+ }
+
+ @keyframes animate2{
+   0%{
+      transform: rotate(360deg);
+   }
+   100%{
+      transform: rotate(0deg);
+   }
+ }
+
+ .login{
+   position: absolute;
+   width: 300px;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+ }
+
+ .login h2{
+   font-size: 2em;
+   color: #fff;
+ }
+ 
+ .login .inputbx input{
+   position: relative;
+   width: 100%;
+   padding: 12px 20px ;
+   background: transparent;
+   border: 2px solid#fff;
+   border-radius: 40px ;
+   font-size: 1.2rem;
+   color: #fff;
+   box-shadow: none;
+   outline: none;
+ }
+
+ .login .inputbx input[type="submit"]{
+width: 100%;
+background: #0078ff;
+background: linear-gradient(45deg,#ff357a,#fff172);
+border: none;
+cursor: pointer;
+ }
+
+ .login .inputbx input::placeholder{
+   color: rgba(255,255,255,0.75);
+ }
+
+ .login .links{
+   position: relative;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between
+   ;
+   padding: 0 20px;
+ }
+
+ .login .links a{
+   color: #ff357a;
+   text-decoration: none;
+   gap: 12px;
+ }
+
+
+
+
